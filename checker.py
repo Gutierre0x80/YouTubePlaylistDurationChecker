@@ -2,6 +2,8 @@ import requests
 import re
 import sys
 
+#Created by gutierre0x80
+
 RED = "\033[91m"
 GREEN = "\033[92m"
 RESET = "\033[0m"
