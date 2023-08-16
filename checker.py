@@ -2,7 +2,6 @@ import requests
 import re
 import sys
 
-# Definindo códigos ANSI para cores
 RED = "\033[91m"
 GREEN = "\033[92m"
 RESET = "\033[0m"
@@ -16,7 +15,7 @@ def get_playlist_duration(html_content):
     total_duration_seconds = 0
     for duration in durations:
         minutes, seconds = map(int, duration.split(":"))
-        total_duration_seconds += minutes * 60 + seconds
+        total_duration_seconds += (minutes * 60 + seconds) / 2
 
     total_hours = total_duration_seconds // 3600
     total_minutes = (total_duration_seconds % 3600) // 60
